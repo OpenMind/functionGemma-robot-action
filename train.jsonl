@@ -1,0 +1,394 @@
+{"user_prompt": "Can you shake my hand?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "shake_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Nice to meet you!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "shake_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Shake my hand", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "shake_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Give me your paw", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "shake_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Can we shake hands?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "shake_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "I want to shake your hand", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "shake_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Give me your hand", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "shake_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Put it there", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "shake_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Let's shake on it", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "shake_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "I've always wanted to shake a robot's hand!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "shake_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Do you shake hands?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "shake_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Are you friendly? Give me your paw", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "shake_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Come on, shake my hand!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "shake_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Can I be friends with you? Shake?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "shake_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Hello!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "hello"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Hi!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "hello"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Hey!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "hello"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Good morning!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "hello"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Good afternoon!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "hello"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Hey, how are you?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "hello"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Hi there!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "hello"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Hey buddy!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "hello"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Hi, I heard a lot about you!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "hello"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Hi, can you say hi back?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "hello"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "I'm so happy to meet you!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "hello"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Hey, I've been wanting to meet you!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "hello"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Hi, what's your name?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "hello"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Hello, do you know who I am?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "hello"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Oh hi, you're so cute!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "hello"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Bye!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wave_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "Goodbye!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wave_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "I have to go now", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wave_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "I'll miss you!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wave_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "See you next time!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wave_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "I'm leaving now", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wave_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "See you later!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wave_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Take care!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wave_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Can you wave at me?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wave_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Wave to me!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wave_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Nice meeting you, bye!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wave_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Later!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wave_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "I'll be back soon!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wave_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Catch you later!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wave_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Come on, wave at me!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wave_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Sit", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Sit down", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Sit down for me", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Good dog, sit!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Can you sit?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Can you sit and wait?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "think"}}]}
+{"user_prompt": "Sit down, I need to talk", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "think"}}]}
+{"user_prompt": "Can you sit still?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "think"}}]}
+{"user_prompt": "Sit with me", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Are you tired? Sit down", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "You look tired, have a rest", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "Let's just sit and chill", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "It's late, time to rest", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "I'm sad right now", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "I'm having a bad day", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "Today isn't going well", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "I'm not feeling well", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "I've been having a rough day", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "You're being mean to me!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "I'm scared, sit next to me", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "You made a mistake, sit down", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Can you just sit still for a second?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Stand up", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_up"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Get up", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_up"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Stand up please", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_up"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Can you get up for me?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_up"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Can you stand up?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_up"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Are you going to stand up?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_up"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "I want to see you stand", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_up"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Get up, let's go!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_up"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Time to get up!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_up"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Get up, I need you!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_up"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Come on, stand up!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_up"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Don't be lazy, get up!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_up"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Stand up straight!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_up"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Wake up and stand!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_up"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Can you dance?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "I want to see you dance!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Show me your moves!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Are you going to dance?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Show me what you've got!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Can you dance for everyone?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Dance for me!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Let's dance!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Show me how you dance", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Can I see you dance?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Do you like dancing?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "I feel like dancing, you too?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Do you know how to dance?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Do a little dance for me", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Come on, dance a little!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Show off your dance moves!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Dance with me!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "I love watching you dance!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Can you spin?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Can you turn around?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Can you rotate in a circle?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Can you rotate?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "How fast can you spin?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Spin around", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Let me see you spin!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "One more spin!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "That was cool, do it again!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Keep spinning!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Turn around", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Do a spin for me", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Go around in a circle", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Spin around one more time", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "I want to see you spin", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Spin one more time please!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Good boy!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Good girl!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "That was great!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "You make me so happy!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Well done!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "I'm so happy to see you!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Are you happy to see me?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "You're so cute!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "You're adorable!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "You're really cute!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "I love you!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Aww, you're sweet!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "You're my favorite!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "That was amazing!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "You're the best!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "You did great!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Can you stretch?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stretch"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Do you know how to stretch?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stretch"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Can you loosen up?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stretch"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Do a stretch", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stretch"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Show me a stretch", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stretch"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Give me a big stretch!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stretch"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Stretch your legs", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stretch"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "How about a stretch?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stretch"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Let's stretch together", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stretch"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Can you do yoga?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stretch"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Are you stiff? Stretch a little", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stretch"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "think"}}]}
+{"user_prompt": "Let's warm up!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stretch"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Are you tired? Try a stretch", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stretch"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "Morning stretch time!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stretch"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "Stretch before we play!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stretch"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Can you pose?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Can I take a photo of you?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Pose for a photo!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Look good for me!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Hold that pose!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Strike a pose!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Look cool!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Show me your best pose", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Look impressive!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Can you show off a little?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "That looks cool, hold it!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Can you do a power pose?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Can I get a picture with you?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Act cool for a second", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Can you be a model for a sec?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Can you strike a pose for the photo?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Can you make a heart?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "finger_heart"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Make a heart for me!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "finger_heart"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Do you love me?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "finger_heart"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Show me a heart", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "finger_heart"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Give me some love!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "finger_heart"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "I really like you!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "finger_heart"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "I want to be your friend!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "finger_heart"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Can you make a heart with your paw?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "finger_heart"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Can we be friends?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "finger_heart"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Show me you care!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "finger_heart"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Can you do a heart for the camera?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "finger_heart"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Heart sign!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "finger_heart"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "You're too cute, make a heart!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "finger_heart"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "What's that on the floor?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "scrape"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Is there something down there?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "scrape"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Paw the ground", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "scrape"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Did you find something?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "scrape"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "I'm so frustrated with you!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "scrape"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "You're not listening to me!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "scrape"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "That's not what I said!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "scrape"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "You keep getting it wrong!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "scrape"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "I've told you so many times!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "scrape"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "I'm angry right now!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "scrape"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "That was wrong, do better!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "scrape"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "Why do you always mess up?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "scrape"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "Stay", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "think"}}]}
+{"user_prompt": "Don't move", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "think"}}]}
+{"user_prompt": "Hold on", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "think"}}]}
+{"user_prompt": "Wait a second", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "think"}}]}
+{"user_prompt": "Stay still", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "think"}}]}
+{"user_prompt": "Wait here for me", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "think"}}]}
+{"user_prompt": "Let me think about this", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "think"}}]}
+{"user_prompt": "Not sure what to do", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "think"}}]}
+{"user_prompt": "Just stay right there", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "think"}}]}
+{"user_prompt": "Can you be still for a moment?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "think"}}]}
+{"user_prompt": "Can you stop moving?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "I have no idea what's going on", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "That doesn't make sense to me", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "I don't know what to say", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Why are you doing that?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "I'm so nervous", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Wait, what just happened?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "I'm embarrassed, don't look at me", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Are you ignoring me?!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "I'm losing my patience", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "Are you okay?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "recovery_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "You fell down!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "recovery_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Oh no, are you hurt?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "recovery_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "That was a fall, you okay?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "recovery_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Can you get back up?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "recovery_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Get back up!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "recovery_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "You slipped! Can you stand?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "recovery_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Come on, get up!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "recovery_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Pick yourself up!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "recovery_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Get back on your feet!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "recovery_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Stand back up!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "recovery_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Don't let a fall stop you!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "recovery_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Can you crouch down?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Can you get smaller?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Crouch down for me", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Can you lay flat?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Can you go lower?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Get low", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "How low can you go?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Be sneaky!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Get into stealth mode!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Crouch down, let's play!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Duck!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Get down, I'm scared", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Are you shy? You can hide!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Make yourself small", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Can you stand on two legs?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "high_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "How tall are you?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "high_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Can you get up high?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "high_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Show me how tall you are!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "high_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Look over there!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "high_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Stand up and look around", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "high_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Stand tall!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "high_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Stand as tall as you can!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "high_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Stand up on your back legs", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "high_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Show me your full height", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "high_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Rise up!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "high_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Can you stand high and wave?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "high_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Wow, you're so tall!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "high_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "You make me smile!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "I'm having a great day!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "This is so much fun!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "You always cheer me up!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Are you happy today?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "You're so fun to be around!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Today is a good day!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "You're the best part of my day!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "This totally made my day!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "I love being here with you!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "I'm sad today", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "I'm really upset", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "I feel so alone", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "That really hurt my feelings", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "I'm going to miss you", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wave_hand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "Are you sad?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "That made me really sad", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "Today hasn't been great", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "I'm a bit down right now", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "Things haven't been going well", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "This is so cool!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "I can't believe you can do that!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Oh wow, really?!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "That's incredible!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "I'm so excited!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Are you excited too?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "We did it!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "That was the coolest thing ever!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "I love this so much!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "This is everything I hoped for!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "What can you do?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "How do you work?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Are you smart?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "What's your favorite thing to do?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Can you show me something cool?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Can you understand me?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "What else can you do?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "Do you have feelings?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "What's over there?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "high_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "I wonder what you're capable of", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "curious"}}]}
+{"user_prompt": "I didn't expect that at all!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Wait, you can do that?!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "high_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "No way!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "I didn't see that coming!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Are you serious?!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "high_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "I had no idea you could do that!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "That was so unexpected!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "I can't believe it!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Whoa, I wasn't ready for that!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Wow, that's wild!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "I really love you!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "finger_heart"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "You mean a lot to me!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "I'm so glad I met you!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "You're so special!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "finger_heart"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "You make my heart happy!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "finger_heart"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "You're my favorite robot!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "I want to bring you home!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "I care about you!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "finger_heart"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Do you love me back?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "finger_heart"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Can we be best friends?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "finger_heart"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "That was perfect!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "I'm so proud of you!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "That was really impressive!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "high_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "You nailed it!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "I knew you could do it!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "You're so talented!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "high_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Wow, you're really good!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Amazing job!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "pose"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "You should be proud!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "high_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "You outdid yourself!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "high_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "happy"}}]}
+{"user_prompt": "Aww, you're adorable!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Can I pet you?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Oh my gosh, so cute!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Don't be shy!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Are you shy?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "You look a little shy", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "I just want to say hi!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Look at you, so cute!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Come here, it's okay!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "You're such a cute little robot!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Can we play?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Let's play together!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Do something funny!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Are you playful?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Let's have some fun!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "You're so funny!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Do something silly!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "I bet you can't do that again!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "spin"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "You're so goofy!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "wiggle_hips"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Can you goof around?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "dance"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "excited"}}]}
+{"user_prompt": "Are you feeling sleepy?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "I'm so tired right now", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "I need a nap", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "You look tired", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "Are you feeling tired?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "It's getting pretty late", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "Long day today", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "Do you ever get tired?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "Let's take a break", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "Good night!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "I'm a little scared", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Are you scared?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "That was really scary!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "I'm nervous about this", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Does that scare you?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "That gave me a fright!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "I'm a bit worried", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Can you protect me?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "high_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Something feels off", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "I'm feeling anxious", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "That was so embarrassing!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "I made a fool of myself", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "I can't believe I did that", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Everyone saw that!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "That didn't go as planned", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "I feel silly right now", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "That was so awkward", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Are you embarrassed?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "low_stand"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Don't worry, nobody noticed!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "I messed up in front of everyone", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "sit_down"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "I'm really frustrated!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "scrape"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "You're not listening!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "scrape"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "That's not what I asked for!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "scrape"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "You keep making the same mistake!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "scrape"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "Why won't you listen?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "scrape"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "That was completely wrong!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "scrape"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "This is so annoying!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "scrape"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "I'm really mad right now!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "scrape"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "Can you please just listen?!", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "sad"}}]}
+{"user_prompt": "Hmm, let me think", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "think"}}]}
+{"user_prompt": "Let me figure this out", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "think"}}]}
+{"user_prompt": "Give me a second", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "think"}}]}
+{"user_prompt": "What should I do?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "think"}}]}
+{"user_prompt": "I'm not sure about this", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "think"}}]}
+{"user_prompt": "That's a tough one", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "think"}}]}
+{"user_prompt": "Are you thinking?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "think"}}]}
+{"user_prompt": "What do you think?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "think"}}]}
+{"user_prompt": "I need to think about it", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "think"}}]}
+{"user_prompt": "Let me consider that", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "think"}}]}
+{"user_prompt": "I'm confused", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "I don't understand", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "What do you mean?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "I can't figure out what's going on", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Can you explain that?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "I'm totally lost", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Are you confused?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "Why did you do that?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "I don't get it", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
+{"user_prompt": "What's happening?", "tool_calls": [{"tool_name": "robot_action", "tool_args": {"action_name": "stand_still"}}, {"tool_name": "show_emotion", "tool_args": {"emotion": "confused"}}]}
