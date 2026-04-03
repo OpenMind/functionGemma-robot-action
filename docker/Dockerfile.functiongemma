@@ -1,0 +1,28 @@
+FROM nvcr.io/nvidia/pytorch:25.10-py3
+
+WORKDIR /app
+
+RUN pip install --no-cache-dir \
+    fastapi \
+    "uvicorn[standard]" \
+    transformers \
+    accelerate \
+    huggingface_hub
+
+# Pre-download model at build time so startup is instant
+RUN python3 -c "from transformers import AutoTokenizer, AutoModelForCausalLM; AutoTokenizer.from_pretrained('OpenmindAGI/functiongemma-finetuned-g1'); AutoModelForCausalLM.from_pretrained('OpenmindAGI/functiongemma-finetuned-g1')"
+
+COPY src/functiongemma/server.py .
+
+# Jetson Thor inference optimizations
+ENV CUDA_MODULE_LOADING=LAZY
+ENV PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+ENV OMP_NUM_THREADS=4
+ENV TOKENIZERS_PARALLELISM=false
+
+EXPOSE 8200
+
+HEALTHCHECK --interval=30s --timeout=10s --start-period=120s --retries=3 \
+    CMD python3 -c "import urllib.request; urllib.request.urlopen('http://localhost:8200/health')" || exit 1
+
+CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8200", "--workers", "1"]

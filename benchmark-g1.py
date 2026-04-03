@@ -12,8 +12,12 @@ Of 33 tokens, only ~2 are actual decisions. This should cut decode from
 580ms to ~60ms.
 """
 
-import json, re, time, torch, argparse
-from transformers import AutoTokenizer, AutoModelForCausalLM
+import argparse
+import json
+import time
+
+import torch
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
 # ============================================================
 # Model source — works with both Hugging Face repo ID and local path
@@ -25,9 +29,38 @@ ACTIONS = ["shake_hand", "face_wave", "hands_up", "stand_still", "show_hand"]
 EMOTIONS = ["happy", "sad", "excited", "confused", "curious", "think"]
 
 FUNCTIONS = [
-    {"name": "robot_action", "description": "Execute a predefined robot action or gesture", "parameters": {"type": "OBJECT", "properties": {"action_name": {"type": "STRING", "description": "The action to perform", "enum": ACTIONS}}, "required": ["action_name"]}},
-    {"name": "show_emotion", "description": "Display an emotion on the robot avatar screen using Rive animations", "parameters": {"type": "OBJECT", "properties": {"emotion": {"type": "STRING", "description": "The emotion to display", "enum": EMOTIONS}}, "required": ["emotion"]}},
+    {
+        "name": "robot_action",
+        "description": "Execute a predefined robot action or gesture",
+        "parameters": {
+            "type": "OBJECT",
+            "properties": {
+                "action_name": {
+                    "type": "STRING",
+                    "description": "The action to perform",
+                    "enum": ACTIONS,
+                }
+            },
+            "required": ["action_name"],
+        },
+    },
+    {
+        "name": "show_emotion",
+        "description": "Display an emotion on the robot avatar screen using Rive animations",
+        "parameters": {
+            "type": "OBJECT",
+            "properties": {
+                "emotion": {
+                    "type": "STRING",
+                    "description": "The emotion to display",
+                    "enum": EMOTIONS,
+                }
+            },
+            "required": ["emotion"],
+        },
+    },
 ]
+
 
 def build_prompt(user_input):
     decls = ""
@@ -38,8 +71,12 @@ def build_prompt(user_input):
             f"parameters:{json.dumps(f['parameters'])}}}"
             f"<end_function_declaration>"
         )
-    system = "You are a robot action controller. When the user gives a command, call the appropriate functions. Always call both a robot_action AND show_emotion together.\n" + decls
+    system = (
+        "You are a robot action controller. When the user gives a command, call the appropriate functions. Always call both a robot_action AND show_emotion together.\n"
+        + decls
+    )
     return f"<bos><start_of_turn>developer\n{system}<end_of_turn>\n<start_of_turn>user\n{user_input}<end_of_turn>\n<start_of_turn>model\n"
+
 
 def load_model(model_path):
     print(f"Loading model from: {model_path}")
@@ -54,9 +91,17 @@ def load_model(model_path):
 
 
 @torch.no_grad()
-def generate_constrained(model, input_ids, action_prefix, action_suffix,
-                         emotion_suffix, action_token_ids, emotion_token_ids,
-                         valid_action_first_tokens, valid_emotion_first_tokens):
+def generate_constrained(
+    model,
+    input_ids,
+    action_prefix,
+    action_suffix,
+    emotion_suffix,
+    action_token_ids,
+    emotion_token_ids,
+    valid_action_first_tokens,
+    valid_emotion_first_tokens,
+):
     """
     Constrained generation with BATCHED token feeding.
 
@@ -111,8 +156,12 @@ def generate_constrained(model, input_ids, action_prefix, action_suffix,
 
 def main():
     parser = argparse.ArgumentParser(description="FunctionGemma Robot Benchmark")
-    parser.add_argument("--local", action="store_true", help="Use local model instead of Hugging Face")
-    parser.add_argument("--model", type=str, default=None, help="Custom model path or HF repo ID")
+    parser.add_argument(
+        "--local", action="store_true", help="Use local model instead of Hugging Face"
+    )
+    parser.add_argument(
+        "--model", type=str, default=None, help="Custom model path or HF repo ID"
+    )
     args = parser.parse_args()
 
     if args.model:
@@ -170,9 +219,15 @@ def main():
     for _ in range(3):
         inputs = tokenizer(build_prompt("hello"), return_tensors="pt").to(model.device)
         generate_constrained(
-            model, inputs["input_ids"], action_prefix, action_suffix,
-            emotion_suffix, action_token_ids, emotion_token_ids,
-            valid_action_first_tokens, valid_emotion_first_tokens,
+            model,
+            inputs["input_ids"],
+            action_prefix,
+            action_suffix,
+            emotion_suffix,
+            action_token_ids,
+            emotion_token_ids,
+            valid_action_first_tokens,
+            valid_emotion_first_tokens,
         )
     print("Done!\n")
 
@@ -204,9 +259,15 @@ def main():
             torch.cuda.synchronize()
         start = time.time()
         action, emotion = generate_constrained(
-            model, inputs["input_ids"], action_prefix, action_suffix,
-            emotion_suffix, action_token_ids, emotion_token_ids,
-            valid_action_first_tokens, valid_emotion_first_tokens,
+            model,
+            inputs["input_ids"],
+            action_prefix,
+            action_suffix,
+            emotion_suffix,
+            action_token_ids,
+            emotion_token_ids,
+            valid_action_first_tokens,
+            valid_emotion_first_tokens,
         )
         if torch.cuda.is_available():
             torch.cuda.synchronize()
@@ -215,7 +276,7 @@ def main():
         times.append(ms)
         print(f"{ms:6.0f}ms  {t:<30s} action={action:<16s} emotion={emotion}")
 
-    print(f"\n--- Results ---")
+    print("\n--- Results ---")
     print(f"Min:     {min(times):.0f}ms")
     print(f"Max:     {max(times):.0f}ms")
     print(f"Average: {sum(times)/len(times):.0f}ms")

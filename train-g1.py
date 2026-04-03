@@ -5,12 +5,12 @@ Based on: https://ai.google.dev/gemma/docs/functiongemma/finetuning-with-functio
 """
 
 import json
+
 import torch
 from datasets import Dataset
-from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import LoraConfig
-from trl import SFTTrainer, SFTConfig
-
+from transformers import AutoModelForCausalLM, AutoTokenizer
+from trl import SFTConfig, SFTTrainer
 
 # CONFIG
 BASE_MODEL = "google/functiongemma-270m-it"
@@ -40,11 +40,11 @@ FUNCTION_DEFINITIONS = [
                         "hands_up",
                         "stand_still",
                         "show_hand",
-                    ]
+                    ],
                 }
             },
-            "required": ["action_name"]
-        }
+            "required": ["action_name"],
+        },
     },
     {
         "name": "show_emotion",
@@ -55,12 +55,12 @@ FUNCTION_DEFINITIONS = [
                 "emotion": {
                     "type": "STRING",
                     "description": "The emotion to display",
-                    "enum": ["happy", "sad", "excited", "confused", "curious", "think"]
+                    "enum": ["happy", "sad", "excited", "confused", "curious", "think"],
                 }
             },
-            "required": ["emotion"]
-        }
-    }
+            "required": ["emotion"],
+        },
+    },
 ]
 
 
@@ -106,8 +106,7 @@ def build_system_message() -> str:
     return (
         "You are a robot action controller. "
         "When the user gives a command, call the appropriate functions. "
-        "Always call both a robot_action AND show_emotion together.\n"
-        + declarations
+        "Always call both a robot_action AND show_emotion together.\n" + declarations
     )
 
 
@@ -151,7 +150,7 @@ def load_and_format_dataset(filepath: str) -> Dataset:
 
     dataset = Dataset.from_list(examples)
     print(f"Loaded {len(dataset)} training examples")
-    print(f"\n--- Example formatted text ---")
+    print("\n--- Example formatted text ---")
     print(dataset[0]["text"][:500])
     print("...")
     return dataset
@@ -206,8 +205,15 @@ def main():
     lora_config = LoraConfig(
         r=8,
         lora_alpha=16,
-        target_modules=["q_proj", "k_proj", "v_proj", "o_proj",
-                        "gate_proj", "up_proj", "down_proj"],
+        target_modules=[
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj",
+            "gate_proj",
+            "up_proj",
+            "down_proj",
+        ],
         lora_dropout=0.1,
         bias="none",
         task_type="CAUSAL_LM",
@@ -237,7 +243,6 @@ def main():
         report_to="none",
     )
 
-
     # Create trainer
     trainer = SFTTrainer(
         model=model,
@@ -246,7 +251,6 @@ def main():
         eval_dataset=eval_dataset,
         peft_config=lora_config,
     )
-
 
     # Train
     print("\n[5/5] Starting training...")
