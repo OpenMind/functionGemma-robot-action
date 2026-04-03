@@ -212,9 +212,7 @@ def generate_constrained(input_ids: torch.Tensor) -> tuple[str, str]:
     # Forward pass 2: feed action tokens + suffix, pick emotion
     combined = action_token_ids[chosen_action] + action_suffix
     combined_tensor = torch.tensor([combined], dtype=torch.long, device=device)
-    outputs = model(
-        input_ids=combined_tensor, past_key_values=past, use_cache=True
-    )
+    outputs = model(input_ids=combined_tensor, past_key_values=past, use_cache=True)
 
     logits = outputs.logits[:, -1, :]
     mask = torch.full_like(logits, float("-inf"))
@@ -319,9 +317,7 @@ def predict(req: PredictRequest):
         emotion,
         latency,
     )
-    return PredictResponse(
-        action=action, emotion=emotion, latency_ms=round(latency, 1)
-    )
+    return PredictResponse(action=action, emotion=emotion, latency_ms=round(latency, 1))
 
 
 @app.post("/predict_batch", response_model=BatchPredictResponse)
@@ -363,7 +359,9 @@ def predict_batch(req: BatchPredictRequest):
         )
 
     total_latency = (time.perf_counter() - total_start) * 1000
-    logger.info("predict_batch | count=%d | total=%.0fms", len(req.texts), total_latency)
+    logger.info(
+        "predict_batch | count=%d | total=%.0fms", len(req.texts), total_latency
+    )
     return BatchPredictResponse(
         results=results, count=len(results), total_latency_ms=round(total_latency, 1)
     )

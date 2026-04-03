@@ -3,8 +3,9 @@ Benchmark the FunctionGemma server.
 Usage: python3 benchmark_client.py [--url http://localhost:8200]
 """
 
-import time
 import argparse
+import time
+
 import requests
 
 TESTS = [
@@ -24,6 +25,7 @@ TESTS = [
     "Nice to meet you",
     "Thank you so much",
 ]
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -52,9 +54,11 @@ def main():
         inference_ms = data["latency_ms"]
         times.append(inference_ms)
 
-        print(f"  {inference_ms:5.0f}ms inference | {total_ms:5.0f}ms total | {t:<30s} -> {data['action']:<16s} {data['emotion']}")
+        print(
+            f"  {inference_ms:5.0f}ms inference | {total_ms:5.0f}ms total | {t:<30s} -> {data['action']:<16s} {data['emotion']}"
+        )
 
-    print(f"\n--- Inference (model only) ---")
+    print("\n--- Inference (model only) ---")
     print(f"Min:     {min(times):.0f}ms")
     print(f"Max:     {max(times):.0f}ms")
     print(f"Average: {sum(times)/len(times):.0f}ms")
@@ -65,7 +69,10 @@ def main():
     r = requests.post(f"{args.url}/predict_batch", json={"texts": TESTS})
     total_ms = (time.time() - start) * 1000
     data = r.json()
-    print(f"Total:   {data['total_latency_ms']:.0f}ms inference | {total_ms:.0f}ms with network")
+    print(
+        f"Total:   {data['total_latency_ms']:.0f}ms inference | {total_ms:.0f}ms with network"
+    )
+
 
 if __name__ == "__main__":
     main()

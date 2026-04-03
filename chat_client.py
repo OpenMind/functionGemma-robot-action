@@ -3,9 +3,10 @@ Chat with the FunctionGemma server.
 Usage: python3 chat_client.py [--url http://localhost:8200]
 """
 
-import json
 import argparse
+
 import requests
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -23,7 +24,10 @@ def main():
 
         r = requests.post(f"{args.url}/predict", json={"text": text})
         data = r.json()
-        print(f"Robot ({data['latency_ms']:.0f}ms): action={data['action']}  emotion={data['emotion']}\n")
+        print(
+            f"Robot ({data['latency_ms']:.0f}ms): action={data['action']}  emotion={data['emotion']}\n"
+        )
+
 
 if __name__ == "__main__":
     main()
