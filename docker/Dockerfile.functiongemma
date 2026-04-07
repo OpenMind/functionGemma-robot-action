@@ -10,7 +10,7 @@ RUN pip install --no-cache-dir \
     huggingface_hub
 
 # Pre-download model at build time so startup is instant
-RUN HF_TOKEN=HF_TOKEN_PLACEHOLDER python3 -c "from transformers import AutoTokenizer, AutoModelForCausalLM; AutoTokenizer.from_pretrained('OpenmindAGI/functiongemma-finetuned-g1-multilingual'); AutoModelForCausalLM.from_pretrained('OpenmindAGI/functiongemma-finetuned-g1-multilingual')"
+RUN python3 -c "from transformers import AutoTokenizer, AutoModelForCausalLM; AutoTokenizer.from_pretrained('OpenmindAGI/functiongemma-finetuned-g1-multilingual'); AutoModelForCausalLM.from_pretrained('OpenmindAGI/functiongemma-finetuned-g1-multilingual')"
 COPY src/functiongemma/server.py .
 
 # Jetson Thor inference optimizations

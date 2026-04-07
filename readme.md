@@ -91,7 +91,8 @@ cd functiongemma-robot-actions
 ### 2. Download the model
 
 Download the functionGemma-finetuned-g1 model to the repo directory:
-1. Google Drive: https://drive.google.com/drive/folders/1Jx5zfi_Hixq6ABJCBF5yQm3nox9CVEeA?usp=sharing
+1. Huggingface: OpenmindAGI/functiongemma-finetuned-g1 (English Primary MOdel)
+2. Huggingface: OpenmindAGI/functiongemma-finetuned-g1-multilingual (supports English, Japanese, Chinese, French, German, Spanish)
 
 Place it so the directory structure looks like:
 
