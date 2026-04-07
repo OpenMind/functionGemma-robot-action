@@ -19,6 +19,66 @@ The model takes a user's voice/text input and outputs:
 
 For general questions or conversation, the robot defaults to `stand_still` with an appropriate emotion.
 
+## OpenAI-Compatible API
+
+The server provides OpenAI-compatible endpoints, allowing you to use the OpenAI SDK or any OpenAI-compatible client:
+
+### Endpoints
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/v1/chat/completions` | POST | Chat endpoint with tool calls in OpenAI format |
+| `/v1/models` | GET | List available models |
+| `/actions` | GET | List supported actions and emotions |
+| `/health` | GET | Health check |
+
+### Example with OpenAI SDK
+
+```python
+from openai import OpenAI
+
+# Point to your local server
+client = OpenAI(
+    base_url="http://localhost:8200/v1",
+    api_key="dummy-key"  # Not validated
+)
+
+response = client.chat.completions.create(
+    model="functiongemma-finetuned-g1",
+    messages=[
+        {"role": "user", "content": "Wave at me!"}
+    ]
+)
+
+# Response includes tool_calls
+for tool_call in response.choices[0].message.tool_calls:
+    print(f"{tool_call.function.name}: {tool_call.function.arguments}")
+# Output:
+# robot_action: {"action_name": "face_wave"}
+# show_emotion: {"emotion": "happy"}
+```
+
+### Example with HTTP Requests
+
+```bash
+curl -X POST http://localhost:8200/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "functiongemma-finetuned-g1",
+    "messages": [
+      {"role": "user", "content": "Hello! Nice to meet you!"}
+    ]
+  }'
+```
+
+### Testing
+
+Run the OpenAI-compatible test client:
+
+```bash
+python3 chat_client_openai.py
+```
+
 ## Supported Actions
 
 | Action | Description |
@@ -53,15 +113,30 @@ Benchmarked on NVIDIA Jetson AGX Thor with constrained decoding (`benchmark.py`)
 
 The constrained decoding approach reduces autoregressive generation from ~33 tokens down to 2 forward passes (one for action, one for emotion), achieving ~18x speedup over standard `model.generate()`.
 
-## Files
+## Project Structure
 
-| File | Description |
-|------|-------------|
-| `train.py` | Fine-tuning script (LoRA on FunctionGemma 270M) |
-| `remerge.py` | Re-merge LoRA adapter with vocab size fix |
-| `chat.py` | Interactive chat using standard generation |
-| `benchmark.py` | Constrained decoding benchmark |
-| `train-g1.jsonl` | Training data (545 examples) |
+```
+functiongemma-robot-action/
+├── src/
+│   └── functiongemma/
+│       ├── __init__.py
+│       └── server.py          # FastAPI server with OpenAI-compatible API
+├── scripts/
+│   ├── train-g1.py            # Fine-tuning script (LoRA on FunctionGemma 270M)
+│   └── chat-g1.py             # Interactive chat using standard generation
+├── benchmarks/
+│   ├── benchmark-g1.py        # Constrained decoding benchmark (local)
+│   ├── benchmark-g1-server.py # Benchmark against server API
+│   └── benchmark-g1-server-multilingual.py  # Multilingual benchmark
+├── examples/
+│   └── chat_client_openai.py  # OpenAI-compatible client for testing
+├── data/
+│   └── train-g1.jsonl         # Training data (545 examples)
+├── docker/
+│   └── Dockerfile.functiongemma
+├── docker-compose.yml
+└── readme.md
+```
 
 ## Training
 
@@ -91,7 +166,7 @@ cd functiongemma-robot-actions
 ### 2. Download the model
 
 Download the functionGemma-finetuned-g1 model to the repo directory:
-1. Huggingface: OpenmindAGI/functiongemma-finetuned-g1 (English Primary MOdel)
+1. Huggingface: OpenmindAGI/functiongemma-finetuned-g1 (English Primary Model)
 2. Huggingface: OpenmindAGI/functiongemma-finetuned-g1-multilingual (supports English, Japanese, Chinese, French, German, Spanish)
 
 Place it so the directory structure looks like:
@@ -118,14 +193,19 @@ pip install torch transformers accelerate
 ### 4. Run benchmark
 
 ```bash
-python3 benchmark-g1.py
-python3 benchmark-g1-server.py # if docker env already launched the server
+python3 benchmarks/benchmark-g1.py  # Local benchmark
+python3 benchmarks/benchmark-g1-server.py  # Benchmark against running server
+python3 benchmarks/benchmark-g1-server-multilingual.py  # Test multilingual support
 ```
 
-### 5. Interactive chat
+### 5. Test with OpenAI-compatible client
 
 ```bash
-python3 chat-g1.py
-python3 chat-client.py # if docker env already launched the server
-# Use multilingual version for multiple language supports!
+python3 examples/chat_client_openai.py
+```
+
+Or use the interactive local chat:
+
+```bash
+python3 scripts/chat-g1.py
 ```

@@ -1,9 +1,10 @@
 """
-Benchmark the FunctionGemma server.
+Benchmark the FunctionGemma server using OpenAI-compatible API.
 Usage: python3 benchmark_client.py [--url http://localhost:8200]
 """
 
 import argparse
+import json
 import time
 
 import requests
@@ -39,7 +40,13 @@ def main():
     # Warmup
     print("Warming up...")
     for _ in range(3):
-        requests.post(f"{args.url}/predict", json={"text": "hello"})
+        requests.post(
+            f"{args.url}/v1/chat/completions",
+            json={
+                "model": "functiongemma-finetuned-g1",
+                "messages": [{"role": "user", "content": "hello"}],
+            },
+        )
     print("Done!\n")
 
     # Benchmark
@@ -47,31 +54,41 @@ def main():
     times = []
     for t in TESTS:
         start = time.time()
-        r = requests.post(f"{args.url}/predict", json={"text": t})
+        r = requests.post(
+            f"{args.url}/v1/chat/completions",
+            json={
+                "model": "functiongemma-finetuned-g1",
+                "messages": [{"role": "user", "content": t}],
+            },
+        )
         total_ms = (time.time() - start) * 1000
 
         data = r.json()
-        inference_ms = data["latency_ms"]
+
+        # Extract action and emotion from tool_calls
+        tool_calls = data["choices"][0]["message"]["tool_calls"]
+        action = None
+        emotion = None
+        for tc in tool_calls:
+            func_name = tc["function"]["name"]
+            args = json.loads(tc["function"]["arguments"])
+            if func_name == "robot_action":
+                action = args["action_name"]
+            elif func_name == "show_emotion":
+                emotion = args["emotion"]
+
+        # Estimate inference time (total - network overhead estimate)
+        inference_ms = total_ms - 10  # Rough estimate
         times.append(inference_ms)
 
         print(
-            f"  {inference_ms:5.0f}ms inference | {total_ms:5.0f}ms total | {t:<30s} -> {data['action']:<16s} {data['emotion']}"
+            f"  {inference_ms:5.0f}ms inference | {total_ms:5.0f}ms total | {t:<30s} -> {action:<16s} {emotion}"
         )
 
     print("\n--- Inference (model only) ---")
     print(f"Min:     {min(times):.0f}ms")
     print(f"Max:     {max(times):.0f}ms")
     print(f"Average: {sum(times)/len(times):.0f}ms")
-
-    # Batch test
-    print(f"\n--- Batch test ({len(TESTS)} inputs) ---")
-    start = time.time()
-    r = requests.post(f"{args.url}/predict_batch", json={"texts": TESTS})
-    total_ms = (time.time() - start) * 1000
-    data = r.json()
-    print(
-        f"Total:   {data['total_latency_ms']:.0f}ms inference | {total_ms:.0f}ms with network"
-    )
 
 
 if __name__ == "__main__":

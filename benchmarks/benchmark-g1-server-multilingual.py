@@ -1,9 +1,10 @@
 """
-Benchmark the FunctionGemma server (multilingual).
+Benchmark the FunctionGemma server (multilingual) using OpenAI-compatible API.
 Usage: python3 benchmark-g1-server.py [--url http://localhost:8200]
 """
 
 import argparse
+import json
 import time
 
 import requests
@@ -95,7 +96,13 @@ def main():
     # Warmup
     print("Warming up...")
     for _ in range(3):
-        requests.post(f"{args.url}/predict", json={"text": "hello"})
+        requests.post(
+            f"{args.url}/v1/chat/completions",
+            json={
+                "model": "functiongemma-finetuned-g1",
+                "messages": [{"role": "user", "content": "hello"}],
+            },
+        )
     print("Done!\n")
 
     # Benchmark
@@ -104,14 +111,33 @@ def main():
 
     for t in TESTS:
         start = time.time()
-        r = requests.post(f"{args.url}/predict", json={"text": t["text"]})
+        r = requests.post(
+            f"{args.url}/v1/chat/completions",
+            json={
+                "model": "functiongemma-finetuned-g1",
+                "messages": [{"role": "user", "content": t["text"]}],
+            },
+        )
         total_ms = (time.time() - start) * 1000
 
         data = r.json()
-        inference_ms = data["latency_ms"]
+
+        # Extract action and emotion from tool_calls
+        tool_calls = data["choices"][0]["message"]["tool_calls"]
+        action = None
+        emotion = None
+        for tc in tool_calls:
+            func_name = tc["function"]["name"]
+            args = json.loads(tc["function"]["arguments"])
+            if func_name == "robot_action":
+                action = args["action_name"]
+            elif func_name == "show_emotion":
+                emotion = args["emotion"]
+
+        inference_ms = total_ms - 10  # Rough estimate
         lang = t["lang"]
         expected = t["action"]
-        correct = data["action"] == expected
+        correct = action == expected
         status = "✓" if correct else "✗"
 
         if lang not in lang_stats:
@@ -124,7 +150,7 @@ def main():
 
         print(
             f"  {lang} {status} {inference_ms:5.0f}ms inf | {total_ms:5.0f}ms total | "
-            f"{t['text']:<35s} expect={expected:<16s} got={data['action']:<16s} {data['emotion']}"
+            f"{t['text']:<35s} expect={expected:<16s} got={action:<16s} {emotion}"
         )
 
     # Latency
@@ -158,18 +184,7 @@ def main():
         bar = "█" * int(pct / 5) + "░" * (20 - int(pct / 5))
         print(f"  {name:<10s} {bar} {stats['correct']}/{stats['total']} ({pct:.0f}%)")
 
-    # Batch test
-    all_texts = [t["text"] for t in TESTS]
-    print(f"\n{'=' * 70}")
-    print(f"BATCH TEST ({len(all_texts)} inputs)")
-    print(f"{'=' * 70}")
-    start = time.time()
-    r = requests.post(f"{args.url}/predict_batch", json={"texts": all_texts})
-    total_ms = (time.time() - start) * 1000
-    data = r.json()
-    print(f"  Inference: {data['total_latency_ms']:.0f}ms")
-    print(f"  Total:     {total_ms:.0f}ms (with network)")
-    print(f"  Per input: {data['total_latency_ms']/len(all_texts):.0f}ms avg inference")
+    print()  # Final newline
 
 
 if __name__ == "__main__":

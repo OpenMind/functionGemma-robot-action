@@ -5,14 +5,14 @@ Run: uvicorn server:app --host 0.0.0.0 --port 8200.
 Uses constrained decoding (2 forward passes instead of 33 autoregressive
 steps) for ~59 ms average latency on Thor.
 
-Endpoints
----------
-POST /predict
-    Convert natural language to robot action + emotion function calls.
-POST /predict_batch
-    Batch prediction for multiple inputs.
+OpenAI-Compatible API
+---------------------
+POST /v1/chat/completions
+    Chat endpoint with function/tool calls in OpenAI format.
+GET  /v1/models
+    List available models.
 GET  /actions
-    List supported actions and emotions.
+    List supported robot actions and emotions.
 GET  /health
     Health check.
 """
@@ -20,10 +20,12 @@ GET  /health
 import json
 import logging
 import time
+import uuid
+from typing import Literal, Optional
 
 import torch
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 logging.basicConfig(
@@ -83,69 +85,66 @@ valid_action_first_tokens: set[int] = set()
 valid_emotion_first_tokens: set[int] = set()
 
 
-# Request/Response Models
-class PredictRequest(BaseModel):
-    """
-    Request body for single prediction.
+# OpenAI-Compatible Request/Response Models
+class ChatMessage(BaseModel):
+    """OpenAI chat message format."""
 
-    Attributes
-    ----------
-    text : str
-        Natural language command or conversation input.
-    """
-
-    text: str
+    role: Literal["system", "user", "assistant", "tool"]
+    content: Optional[str] = None
+    tool_calls: Optional[list[dict]] = None
 
 
-class PredictResponse(BaseModel):
-    """
-    Response body for single prediction.
+class ChatCompletionRequest(BaseModel):
+    """OpenAI /v1/chat/completions request format."""
 
-    Attributes
-    ----------
-    action : str
-        Robot action to perform (e.g. ``"shake_hand"``).
-    emotion : str
-        Emotion to display on avatar screen (e.g. ``"happy"``).
-    latency_ms : float
-        Model inference latency in milliseconds (excludes network I/O).
-    """
-
-    action: str
-    emotion: str
-    latency_ms: float
+    model: str = "functiongemma-finetuned-g1"
+    messages: list[ChatMessage]
+    temperature: Optional[float] = Field(default=1.0, ge=0, le=2)
+    max_tokens: Optional[int] = None
+    stream: bool = False
 
 
-class BatchPredictRequest(BaseModel):
-    """
-    Request body for batch prediction.
+class ToolCall(BaseModel):
+    """OpenAI tool call format."""
 
-    Attributes
-    ----------
-    texts : list of str
-        List of natural language inputs to process.
-    """
-
-    texts: list[str]
+    id: str
+    type: Literal["function"] = "function"
+    function: dict  # {name: str, arguments: str (JSON)}
 
 
-class BatchPredictResponse(BaseModel):
-    """
-    Response body for batch prediction.
+class ChatCompletionMessage(BaseModel):
+    """OpenAI response message format."""
 
-    Attributes
-    ----------
-    results : list of PredictResponse
-        One result per input text.
-    count : int
-        Number of results returned.
-    total_latency_ms : float
-        Total inference latency in milliseconds.
-    """
+    role: Literal["assistant"]
+    content: Optional[str] = None
+    tool_calls: Optional[list[ToolCall]] = None
 
-    results: list[PredictResponse]
-    count: int
-    total_latency_ms: float
+
+class ChatCompletionChoice(BaseModel):
+    """OpenAI choice format."""
+
+    index: int
+    message: ChatCompletionMessage
+    finish_reason: Literal["stop", "tool_calls"]
+
+
+class UsageInfo(BaseModel):
+    """OpenAI usage statistics."""
+
+    prompt_tokens: int
+    completion_tokens: int
+    total_tokens: int
+
+
+class ChatCompletionResponse(BaseModel):
+    """OpenAI /v1/chat/completions response format."""
+
+    id: str
+    object: Literal["chat.completion"] = "chat.completion"
+    created: int
+    model: str
+    choices: list[ChatCompletionChoice]
+    usage: UsageInfo
 
 
 def build_prompt(user_input: str) -> str:
@@ -278,27 +277,43 @@ def load_model():
     logger.info("Model ready!")
 
 
-@app.post("/predict", response_model=PredictResponse)
-def predict(req: PredictRequest):
+@app.post("/v1/chat/completions", response_model=ChatCompletionResponse)
+def chat_completions(req: ChatCompletionRequest):
     """
-    Convert natural language input to action + emotion.
+    OpenAI-compatible chat completions endpoint.
+
+    Converts OpenAI format requests to FunctionGemma predictions and returns
+    results in OpenAI format with tool_calls.
 
     Parameters
     ----------
-    req : PredictRequest
-        Request body containing the text input.
+    req : ChatCompletionRequest
+        OpenAI-formatted request with messages array.
 
     Returns
     -------
-    PredictResponse
-        Chosen action, emotion, and inference latency.
+    ChatCompletionResponse
+        OpenAI-formatted response with tool calls for action and emotion.
     """
     if model is None:
         raise HTTPException(status_code=503, detail="Model not loaded.")
-    if not req.text.strip():
-        raise HTTPException(status_code=400, detail="Text cannot be empty.")
+    if req.stream:
+        raise HTTPException(status_code=400, detail="Streaming not supported.")
 
-    inputs = tokenizer(build_prompt(req.text), return_tensors="pt").to(model.device)
+    # Extract user message (last user message in conversation)
+    user_message = None
+    for msg in reversed(req.messages):
+        if msg.role == "user" and msg.content:
+            user_message = msg.content
+            break
+
+    if not user_message:
+        raise HTTPException(status_code=400, detail="No user message found.")
+
+    # Run prediction
+    inputs = tokenizer(build_prompt(user_message), return_tensors="pt").to(
+        model.device
+    )
 
     if torch.cuda.is_available():
         torch.cuda.synchronize()
@@ -310,67 +325,80 @@ def predict(req: PredictRequest):
         torch.cuda.synchronize()
     latency = (time.perf_counter() - start) * 1000
 
+    # Build OpenAI-format response with tool calls
+    tool_calls = [
+        ToolCall(
+            id=f"call_{uuid.uuid4().hex[:24]}",
+            type="function",
+            function={
+                "name": "robot_action",
+                "arguments": json.dumps({"action_name": action}),
+            },
+        ),
+        ToolCall(
+            id=f"call_{uuid.uuid4().hex[:24]}",
+            type="function",
+            function={
+                "name": "show_emotion",
+                "arguments": json.dumps({"emotion": emotion}),
+            },
+        ),
+    ]
+
+    # Rough token estimate (more accurate would require actual tokenization)
+    prompt_tokens = len(inputs["input_ids"][0])
+    completion_tokens = 10  # Approximate for function calls
+
+    response = ChatCompletionResponse(
+        id=f"chatcmpl-{uuid.uuid4().hex[:24]}",
+        created=int(time.time()),
+        model=req.model,
+        choices=[
+            ChatCompletionChoice(
+                index=0,
+                message=ChatCompletionMessage(
+                    role="assistant", content=None, tool_calls=tool_calls
+                ),
+                finish_reason="tool_calls",
+            )
+        ],
+        usage=UsageInfo(
+            prompt_tokens=prompt_tokens,
+            completion_tokens=completion_tokens,
+            total_tokens=prompt_tokens + completion_tokens,
+        ),
+    )
+
     logger.info(
-        'predict | text="%s" | action=%s emotion=%s | %.0fms',
-        req.text[:50],
+        'chat_completions | text="%s" | action=%s emotion=%s | %.0fms',
+        user_message[:50],
         action,
         emotion,
         latency,
     )
-    return PredictResponse(action=action, emotion=emotion, latency_ms=round(latency, 1))
-
-
-@app.post("/predict_batch", response_model=BatchPredictResponse)
-def predict_batch(req: BatchPredictRequest):
-    """
-    Process multiple inputs with constrained decoding.
-
-    Parameters
-    ----------
-    req : BatchPredictRequest
-        Request body containing list of text inputs.
-
-    Returns
-    -------
-    BatchPredictResponse
-        List of results with total latency.
-    """
-    if model is None:
-        raise HTTPException(status_code=503, detail="Model not loaded.")
-
-    results = []
-    total_start = time.perf_counter()
-
-    for text in req.texts:
-        inputs = tokenizer(build_prompt(text), return_tensors="pt").to(model.device)
-
-        if torch.cuda.is_available():
-            torch.cuda.synchronize()
-        start = time.perf_counter()
-        action, emotion = generate_constrained(inputs["input_ids"])
-        if torch.cuda.is_available():
-            torch.cuda.synchronize()
-        latency = (time.perf_counter() - start) * 1000
-
-        results.append(
-            PredictResponse(
-                action=action, emotion=emotion, latency_ms=round(latency, 1)
-            )
-        )
-
-    total_latency = (time.perf_counter() - total_start) * 1000
-    logger.info(
-        "predict_batch | count=%d | total=%.0fms", len(req.texts), total_latency
-    )
-    return BatchPredictResponse(
-        results=results, count=len(results), total_latency_ms=round(total_latency, 1)
-    )
+    return response
 
 
 @app.get("/actions")
 def actions():
     """List all supported robot actions and avatar emotions."""
     return {"actions": ACTIONS, "emotions": EMOTIONS}
+
+
+@app.get("/v1/models")
+def list_models():
+    """OpenAI-compatible models endpoint."""
+    return {
+        "object": "list",
+        "data": [
+            {
+                "id": "functiongemma-finetuned-g1",
+                "object": "model",
+                "created": 1704067200,
+                "owned_by": "openmind",
+            }
+        ],
+    }
 
 
 @app.get("/health")
