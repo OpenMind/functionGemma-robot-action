@@ -127,4 +127,5 @@ python3 benchmark-g1-server.py # if docker env already launched the server
 ```bash
 python3 chat-g1.py
 python3 chat-client.py # if docker env already launched the server
+# Use multilingual version for multiple language supports!
 ```
