@@ -1,9 +1,6 @@
 services:
   functiongemma:
-    image: openmindagi/functiongemma-service:v1.0.0
-    build:
-      context: .
-      dockerfile: docker/Dockerfile.functiongemma
+    image: openmindagi/functiongemma-service:latest
     container_name: functiongemma_service
     ports:
       - "8200:8200"
