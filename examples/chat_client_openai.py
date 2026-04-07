@@ -7,8 +7,7 @@ or standard HTTP requests.
 
 import json
 import requests
-
-# Can also use: from openai import OpenAI
+from openai import OpenAI
 
 SERVER_URL = "http://localhost:8200"
 
@@ -62,8 +61,6 @@ def test_with_requests():
 def test_with_openai_sdk():
     """Test using OpenAI Python SDK (if installed)."""
     try:
-        from openai import OpenAI
-
         print("\nTesting with OpenAI SDK...")
         print("-" * 60)
 

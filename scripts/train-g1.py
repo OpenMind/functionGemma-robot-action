@@ -14,7 +14,7 @@ from trl import SFTConfig, SFTTrainer
 
 # CONFIG
 BASE_MODEL = "google/functiongemma-270m-it"
-TRAIN_FILE = "train-g1.jsonl"  # Your training data
+TRAIN_FILE = "./data/train-g1.jsonl"
 OUTPUT_DIR = "./functiongemma-robot-actions"
 EPOCHS = 5
 BATCH_SIZE = 2
@@ -22,8 +22,7 @@ LEARNING_RATE = 2e-4
 MAX_SEQ_LENGTH = 512
 
 
-# FUNCTION DEFINITIONS (shared across all examples)
-# These define your robot's API surface
+# FUNCTION DEFINITIONS
 FUNCTION_DEFINITIONS = [
     {
         "name": "robot_action",
