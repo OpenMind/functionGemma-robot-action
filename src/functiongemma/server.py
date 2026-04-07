@@ -311,9 +311,7 @@ def chat_completions(req: ChatCompletionRequest):
         raise HTTPException(status_code=400, detail="No user message found.")
 
     # Run prediction
-    inputs = tokenizer(build_prompt(user_message), return_tensors="pt").to(
-        model.device
-    )
+    inputs = tokenizer(build_prompt(user_message), return_tensors="pt").to(model.device)
 
     if torch.cuda.is_available():
         torch.cuda.synchronize()

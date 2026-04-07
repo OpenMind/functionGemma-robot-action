@@ -79,8 +79,12 @@ TESTS = [
 ]
 
 LANG_NAMES = {
-    "en": "English", "zh": "Chinese", "ja": "Japanese",
-    "fr": "French", "de": "German", "es": "Spanish",
+    "en": "English",
+    "zh": "Chinese",
+    "ja": "Japanese",
+    "fr": "French",
+    "de": "German",
+    "es": "Spanish",
 }
 
 
@@ -141,7 +145,12 @@ def main():
         status = "✓" if correct else "✗"
 
         if lang not in lang_stats:
-            lang_stats[lang] = {"correct": 0, "total": 0, "inference": [], "network": []}
+            lang_stats[lang] = {
+                "correct": 0,
+                "total": 0,
+                "inference": [],
+                "network": [],
+            }
         lang_stats[lang]["total"] += 1
         lang_stats[lang]["inference"].append(inference_ms)
         lang_stats[lang]["network"].append(total_ms)
@@ -160,8 +169,12 @@ def main():
     print(f"\n{'=' * 70}")
     print("LATENCY")
     print(f"{'=' * 70}")
-    print(f"  Inference:  min={min(all_inf):.0f}ms  max={max(all_inf):.0f}ms  avg={sum(all_inf)/len(all_inf):.0f}ms")
-    print(f"  Total:      min={min(all_net):.0f}ms  max={max(all_net):.0f}ms  avg={sum(all_net)/len(all_net):.0f}ms")
+    print(
+        f"  Inference:  min={min(all_inf):.0f}ms  max={max(all_inf):.0f}ms  avg={sum(all_inf)/len(all_inf):.0f}ms"
+    )
+    print(
+        f"  Total:      min={min(all_net):.0f}ms  max={max(all_net):.0f}ms  avg={sum(all_net)/len(all_net):.0f}ms"
+    )
     print()
     for lang, stats in sorted(lang_stats.items()):
         inf_avg = sum(stats["inference"]) / len(stats["inference"])

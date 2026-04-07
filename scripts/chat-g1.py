@@ -6,7 +6,6 @@ import time
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-
 HF_MODEL = "OpenmindAGI/functiongemma-finetuned-g1-multilingual"
 LOCAL_MODEL = "./functionGemma-finetuned-g1"  # For Google Drive download
 

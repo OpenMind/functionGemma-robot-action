@@ -6,6 +6,7 @@ or standard HTTP requests.
 """
 
 import json
+
 import requests
 from openai import OpenAI
 
@@ -77,7 +78,7 @@ def test_with_openai_sdk():
             ],
         )
 
-        print(f"\n📝 User: Wave your hand and show excitement!")
+        print("\n📝 User: Wave your hand and show excitement!")
         print(f"🤖 Model: {response.model}")
 
         choice = response.choices[0]
@@ -89,16 +90,16 @@ def test_with_openai_sdk():
                     f"({tool_call.function.arguments})"
                 )
 
-        print(f"📊 Tokens: {response.usage.prompt_tokens} prompt + "
-              f"{response.usage.completion_tokens} completion = "
-              f"{response.usage.total_tokens} total")
+        print(
+            f"📊 Tokens: {response.usage.prompt_tokens} prompt + "
+            f"{response.usage.completion_tokens} completion = "
+            f"{response.usage.total_tokens} total"
+        )
 
         print("\n" + "=" * 60)
 
     except ImportError:
-        print(
-            "\n⚠️  OpenAI SDK not installed. Install with: pip install openai\n"
-        )
+        print("\n⚠️  OpenAI SDK not installed. Install with: pip install openai\n")
 
 
 def list_models():
