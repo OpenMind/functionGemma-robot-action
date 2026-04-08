@@ -6,10 +6,7 @@ import time
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-# ============================================================
-# Model source — works with both Hugging Face repo ID and local path
-# ============================================================
-HF_MODEL = "wenjinf0811/functiongemma-robot-actions"
+HF_MODEL = "OpenmindAGI/functiongemma-finetuned-g1-multilingual"
 LOCAL_MODEL = "./functionGemma-finetuned-g1"  # For Google Drive download
 
 ACTIONS = ["shake_hand", "face_wave", "hands_up", "stand_still", "show_hand"]
