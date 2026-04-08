@@ -3,12 +3,8 @@ name: Build and Push FunctionGemma Image
 on:
   push:
     branches: [ "main" ]
-    paths:
-      - 'src/functiongemma/**'
-      - 'docker/Dockerfile.functiongemma'
     tags:
-      - 'functiongemma-v*'
-  workflow_dispatch:
+      - 'v*'
 
 jobs:
   build-arm64:
