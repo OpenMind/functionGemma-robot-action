@@ -132,11 +132,11 @@ def main():
         emotion = None
         for tc in tool_calls:
             func_name = tc["function"]["name"]
-            args = json.loads(tc["function"]["arguments"])
+            func_args = json.loads(tc["function"]["arguments"])
             if func_name == "robot_action":
-                action = args["action_name"]
+                action = func_args["action_name"]
             elif func_name == "show_emotion":
-                emotion = args["emotion"]
+                emotion = func_args["emotion"]
 
         inference_ms = total_ms - 10  # Rough estimate
         lang = t["lang"]

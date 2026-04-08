@@ -19,6 +19,7 @@ GET  /health
 
 import json
 import logging
+import os
 import time
 import uuid
 from typing import Literal, Optional
@@ -34,6 +35,9 @@ logging.basicConfig(
     datefmt="%Y-%m-%d %H:%M:%S",
 )
 logger = logging.getLogger("functiongemma-service")
+
+WARMUP_ITERATIONS = int(os.getenv("WARMUP_ITERATIONS", "5"))
+MODEL_NAME = os.getenv("MODEL_NAME", "OpenmindAGI/functiongemma-finetuned-g1-multilingual")
 
 app = FastAPI(title="FunctionGemma Robot Actions")
 model = None
@@ -240,16 +244,24 @@ def load_model():
     global action_token_ids, emotion_token_ids
     global valid_action_first_tokens, valid_emotion_first_tokens
 
-    logger.info("Loading FunctionGemma on CUDA...")
-    tokenizer = AutoTokenizer.from_pretrained("OpenmindAGI/functiongemma-finetuned-g1")
+    logger.info("=" * 60)
+    logger.info("FunctionGemma Robot Actions Server - Starting Up")
+    logger.info("=" * 60)
+
+    logger.info(f"Loading FunctionGemma model: {MODEL_NAME}")
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
     model = AutoModelForCausalLM.from_pretrained(
-        "OpenmindAGI/functiongemma-finetuned-g1",
+        MODEL_NAME,
         torch_dtype=torch.bfloat16,
         device_map="auto",
     )
     model.eval()
 
+    device = next(model.parameters()).device
+    logger.info(f"Model loaded on device: {device}")
+
     # Pre-tokenize action/emotion values
+    logger.info("Pre-tokenizing action/emotion templates...")
     for a in ACTIONS:
         action_token_ids[a] = tokenizer.encode(a, add_special_tokens=False)
     for e in EMOTIONS:
@@ -270,11 +282,41 @@ def load_model():
     valid_action_first_tokens.update(ids[0] for ids in action_token_ids.values())
     valid_emotion_first_tokens.update(ids[0] for ids in emotion_token_ids.values())
 
-    # Warmup
-    for _ in range(5):
-        inputs = tokenizer(build_prompt("hello"), return_tensors="pt").to(model.device)
-        generate_constrained(inputs["input_ids"])
-    logger.info("Model ready!")
+    # Warmup: Run several inference passes to compile CUDA kernels and
+    # ensure optimal performance from the first real request
+    if WARMUP_ITERATIONS > 0:
+        logger.info(f"Warming up model (running {WARMUP_ITERATIONS} inference passes)...")
+        warmup_prompts = [
+            "hello",
+            "wave at me",
+            "shake hands",
+            "I'm confused",
+            "good job!",
+        ]
+
+        for i in range(WARMUP_ITERATIONS):
+            prompt = warmup_prompts[i % len(warmup_prompts)]
+            inputs = tokenizer(build_prompt(prompt), return_tensors="pt").to(model.device)
+            if torch.cuda.is_available():
+                torch.cuda.synchronize()
+
+            start = time.perf_counter()
+            action, emotion = generate_constrained(inputs["input_ids"])
+
+            if torch.cuda.is_available():
+                torch.cuda.synchronize()
+            elapsed_ms = (time.perf_counter() - start) * 1000
+
+            logger.info(
+                f"  Warmup {i+1}/{WARMUP_ITERATIONS}: {elapsed_ms:.0f}ms | {prompt:<15s} -> {action}/{emotion}"
+            )
+    else:
+        logger.info("Warmup disabled (WARMUP_ITERATIONS=0)")
+
+    logger.info("=" * 60)
+    logger.info("✓ Server ready! Listening for requests...")
+    logger.info("  Endpoints: /v1/chat/completions, /v1/models, /actions, /health")
+    logger.info("=" * 60)
 
 
 @app.post("/v1/chat/completions", response_model=ChatCompletionResponse)
@@ -404,6 +446,7 @@ def health():
     """Health check endpoint."""
     return {
         "status": "ok",
-        "model": "functiongemma-finetuned-g1",
+        "model": MODEL_NAME,
         "device": str(model.device) if model else "not loaded",
+        "warmup_iterations": WARMUP_ITERATIONS,
     }

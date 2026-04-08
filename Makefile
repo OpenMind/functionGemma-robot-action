@@ -33,14 +33,14 @@ chat:
 benchmark:
 	uv run python benchmarks/benchmark-g1-server.py
 
+benchmark-multilingual:
+	uv run python benchmarks/benchmark-g1-server-multilingual.py
+
 benchmark-local:
 	uv run python benchmarks/benchmark-g1.py
 
 example:
 	uv run python examples/chat_client_openai.py
-
-test:
-	uv run pytest
 
 lint:
 	uv run ruff check src/ scripts/ benchmarks/ examples/
