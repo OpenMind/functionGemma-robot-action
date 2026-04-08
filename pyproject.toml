@@ -110,7 +110,5 @@ python_files = ["test_*.py"]
 python_classes = ["Test*"]
 python_functions = ["test_*"]
 addopts = "-v --tb=short"
-# Prevent pytest from loading ROS launch_testing plugins that conflict
 norecursedirs = [".git", ".venv", "build", "dist", ".eggs"]
-# Ignore certain entry points that cause conflicts
 filterwarnings = ["ignore::DeprecationWarning"]
