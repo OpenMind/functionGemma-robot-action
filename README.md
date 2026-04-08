@@ -19,6 +19,26 @@ The model takes a user's voice/text input and outputs:
 
 For general questions or conversation, the robot defaults to `stand_still` with an appropriate emotion.
 
+## Quick Start
+
+```bash
+# 1. Install uv (if not already installed)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# 2. Clone and install dependencies
+git clone https://github.com/OpenMind/functionGemma-robot-action.git
+cd functionGemma-robot-action
+uv sync
+
+# 3. Run the server
+uv run uvicorn functiongemma.server:app --host 0.0.0.0 --port 8200
+# or: make server
+
+# 4. Test it!
+uv run python examples/chat_client_openai.py
+# or: make example
+```
+
 ## OpenAI-Compatible API
 
 The server provides OpenAI-compatible endpoints, allowing you to use the OpenAI SDK or any OpenAI-compatible client:
@@ -153,6 +173,20 @@ Trained with LoRA on an NVIDIA RTX 5070 Ti (16 GB):
 | Training examples | 545 (490 train / 55 eval) |
 | Max sequence length | 512 |
 
+To train your own model:
+
+```bash
+# Install training dependencies
+uv sync --extra training
+# or: make install-training
+
+# Run training
+uv run python scripts/train-g1.py
+# or: make train
+```
+
+The training script will fine-tune the base FunctionGemma model and save the result to `./functiongemma-robot-actions/`.
+
 ## Setup on NVIDIA Jetson AGX Thor
 
 ### 1. Clone this repo
@@ -182,30 +216,65 @@ functiongemma-robot-actions/
 └── ...
 ```
 
-### 3. Create virtual environment
+### 3. Install dependencies
+
+#### Option A: Using uv (recommended - fast!)
+
+```bash
+# Install uv if you haven't already
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Install dependencies
+uv sync
+
+# Install with optional dependencies
+uv sync --all-extras  # Includes training, benchmarks, and dev tools
+```
+
+See [UV_GUIDE.md](UV_GUIDE.md) for more uv commands and usage.
+
+#### Option B: Using pip
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
-pip install torch transformers accelerate
+pip install torch transformers accelerate fastapi uvicorn
 ```
 
-### 4. Run benchmark
+### 4. Run the server
 
+#### Using Make (easiest)
 ```bash
-python3 benchmarks/benchmark-g1.py  # Local benchmark
-python3 benchmarks/benchmark-g1-server.py  # Benchmark against running server
-python3 benchmarks/benchmark-g1-server-multilingual.py  # Test multilingual support
+make server  # Runs the server with auto-reload
 ```
 
-### 5. Test with OpenAI-compatible client
-
+#### Using uv
 ```bash
-python3 examples/chat_client_openai.py
+uv run uvicorn functiongemma.server:app --host 0.0.0.0 --port 8200
 ```
 
-Or use the interactive local chat:
+#### Using Docker
+```bash
+docker-compose up
+# or
+make docker-run
+```
+
+### 5. Run benchmarks and examples
 
 ```bash
-python3 scripts/chat-g1.py
+# Using Make
+make benchmark          # Server benchmark
+make benchmark-local    # Local model benchmark
+make example           # OpenAI client example
+
+# Using uv directly
+uv run python benchmarks/benchmark-g1-server.py
+uv run python benchmarks/benchmark-g1-server-multilingual.py
+uv run python examples/chat_client_openai.py
+
+# Interactive chat
+uv run python scripts/chat-g1.py
+# or
+make chat
 ```
