@@ -152,8 +152,7 @@ functiongemma-robot-action/
 │   └── chat_client_openai.py  # OpenAI-compatible client for testing
 ├── data/
 │   └── train-g1.jsonl         # Training data (545 examples)
-├── docker/
-│   └── Dockerfile.functiongemma
+├── Dockerfile
 ├── docker-compose.yml
 └── readme.md
 ```
