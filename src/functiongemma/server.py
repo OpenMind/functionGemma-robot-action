@@ -22,7 +22,7 @@ import logging
 import os
 import time
 import uuid
-from typing import Literal, Optional
+from typing import Literal
 
 import torch
 from fastapi import FastAPI, HTTPException
@@ -37,7 +37,9 @@ logging.basicConfig(
 logger = logging.getLogger("functiongemma-service")
 
 WARMUP_ITERATIONS = int(os.getenv("WARMUP_ITERATIONS", "5"))
-MODEL_NAME = os.getenv("MODEL_NAME", "OpenmindAGI/functiongemma-finetuned-g1-multilingual")
+MODEL_NAME = os.getenv(
+    "MODEL_NAME", "OpenmindAGI/functiongemma-finetuned-g1-multilingual"
+)
 
 app = FastAPI(title="FunctionGemma Robot Actions")
 model = None
@@ -94,8 +96,8 @@ class ChatMessage(BaseModel):
     """OpenAI chat message format."""
 
     role: Literal["system", "user", "assistant", "tool"]
-    content: Optional[str] = None
-    tool_calls: Optional[list[dict]] = None
+    content: str | None = None
+    tool_calls: list[dict] | None = None
 
 
 class ChatCompletionRequest(BaseModel):
@@ -103,8 +105,8 @@ class ChatCompletionRequest(BaseModel):
 
     model: str = "functiongemma-finetuned-g1"
     messages: list[ChatMessage]
-    temperature: Optional[float] = Field(default=1.0, ge=0, le=2)
-    max_tokens: Optional[int] = None
+    temperature: float | None = Field(default=1.0, ge=0, le=2)
+    max_tokens: int | None = None
     stream: bool = False
 
 
@@ -120,8 +122,8 @@ class ChatCompletionMessage(BaseModel):
     """OpenAI response message format."""
 
     role: Literal["assistant"]
-    content: Optional[str] = None
-    tool_calls: Optional[list[ToolCall]] = None
+    content: str | None = None
+    tool_calls: list[ToolCall] | None = None
 
 
 class ChatCompletionChoice(BaseModel):
@@ -285,7 +287,9 @@ def load_model():
     # Warmup: Run several inference passes to compile CUDA kernels and
     # ensure optimal performance from the first real request
     if WARMUP_ITERATIONS > 0:
-        logger.info(f"Warming up model (running {WARMUP_ITERATIONS} inference passes)...")
+        logger.info(
+            f"Warming up model (running {WARMUP_ITERATIONS} inference passes)..."
+        )
         warmup_prompts = [
             "hello",
             "wave at me",
@@ -296,7 +300,9 @@ def load_model():
 
         for i in range(WARMUP_ITERATIONS):
             prompt = warmup_prompts[i % len(warmup_prompts)]
-            inputs = tokenizer(build_prompt(prompt), return_tensors="pt").to(model.device)
+            inputs = tokenizer(build_prompt(prompt), return_tensors="pt").to(
+                model.device
+            )
             if torch.cuda.is_available():
                 torch.cuda.synchronize()
 

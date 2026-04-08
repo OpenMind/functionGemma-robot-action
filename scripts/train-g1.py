@@ -138,7 +138,7 @@ def format_training_example(example: dict) -> str:
 def load_and_format_dataset(filepath: str) -> Dataset:
     """Load JSONL file and format for training."""
     examples = []
-    with open(filepath, "r") as f:
+    with open(filepath) as f:
         for line in f:
             line = line.strip()
             if not line:
