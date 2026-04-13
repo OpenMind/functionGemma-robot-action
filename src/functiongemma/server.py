@@ -46,7 +46,7 @@ model = None
 tokenizer = None
 
 # Action / Emotion definitions — must match training data
-ACTIONS = ["shake_hand", "face_wave", "hands_up", "stand_still", "show_hand"]
+ACTIONS = ["shake_hand", "face_wave", "hands_up", "stand_still", "show_hand", "do_payment", "down_payment"]
 EMOTIONS = ["happy", "sad", "excited", "confused", "curious", "think"]
 
 FUNCTIONS = [
