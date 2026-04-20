@@ -9,7 +9,15 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 HF_MODEL = "OpenmindAGI/functiongemma-finetuned-g1-multilingual"
 LOCAL_MODEL = "./functionGemma-finetuned-g1"  # For Google Drive download
 
-ACTIONS = ["shake_hand", "face_wave", "hands_up", "stand_still", "show_hand", "do_payment", "down_payment"]
+ACTIONS = [
+    "shake_hand",
+    "face_wave",
+    "hands_up",
+    "stand_still",
+    "show_hand",
+    "do_payment",
+    "down_payment",
+]
 EMOTIONS = ["happy", "sad", "excited", "confused", "curious", "think"]
 
 FUNCTIONS = [
